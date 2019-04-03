@@ -4,6 +4,7 @@
       :startValue='345.3'
       name='productCost'
       title='Product Cost'
+      :step='5'
       wrapperClass='b-some-dynamic-class'>
     </InputTypeNumber>
 
@@ -18,6 +19,7 @@
       :startValue='-30'
       name='anotherCost2'
       title='Another Cost negative'
+      :step='0.25'
       wrapperClass='b-some-dynamic-class'>
     </InputTypeNumber>
 
@@ -26,6 +28,7 @@
       name='anotherCost2'
       title='Another Cost negative'
       error='some server error'
+      :step='10'
       wrapperClass='b-some-dynamic-class'>
     </InputTypeNumber>
   </div>

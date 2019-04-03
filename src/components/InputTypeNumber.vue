@@ -77,6 +77,10 @@ export default Vue.extend({
     error: {
       type: String,
     },
+    step: {
+      type: Number,
+      default: 1,
+    },
   },
   computed: {
       randomId(): string  {
@@ -118,10 +122,10 @@ export default Vue.extend({
           return Number.isInteger(+value);
       },
       changeValueIncrease() {
-          this.currentValue = this.processingValue(String(+this.currentValue + 1));
+          this.currentValue = this.processingValue(String(+this.currentValue + this.step));
       },
       changeValueDecrease() {
-          const decreaseValue = +this.currentValue - 1;
+          const decreaseValue = +this.currentValue - this.step;
           const value = decreaseValue < 0 ? +this.currentValue : decreaseValue;
           this.currentValue = this.processingValue(String(value));
       },
